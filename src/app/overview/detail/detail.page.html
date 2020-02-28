@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/overview"></ion-back-button>
+    </ion-buttons>
+
+
+    <ion-title *ngIf="selectedDish" class="ion-text-right">{{selectedDishGroup}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="selectedDish">
+  <ion-card>
+    <ion-card-header>
+      <ion-img [src]="iconSrc"></ion-img>
+      <ion-card-title><ion-label>{{selectedDish.dish.name}}</ion-label></ion-card-title>
+      <ion-card-subtitle>{{selectedDish.dish.ingredients.join(', ') }}</ion-card-subtitle>
+      
+      <ion-item *ngIf="priceType=='number'">
+        <ion-badge color="primary" slot="end">{{selectedDish.price | currency:"EUR"}}</ion-badge>
+      </ion-item>
+      <ion-item *ngIf="priceType=='object'">
+        <ion-badge color="primary" slot="end" *ngFor="let priceEl of selectedDish.price">{{priceEl | currency:"EUR"}}</ion-badge>
+      </ion-item>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item *ngIf="selectedDish.dish.kcal">
+        <ion-badge color="tertiary" slot="end">{{selectedDish.dish.kcal}} kcal</ion-badge>
+      </ion-item>
+
+      <ion-row class="ion-padding" *ngIf="selectedDish.dish.allergens">
+        <ion-col class="ion-text-center" *ngFor="let allergensN of allergensName" size="6">
+          <ion-badge color="warning">{{allergensN}}</ion-badge>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+
+
+  </ion-card>
+</ion-content>
+

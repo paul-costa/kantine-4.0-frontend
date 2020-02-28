@@ -1,0 +1,8 @@
+{
+  "appId": "at.paulcosta",
+  "appName": "kantine-4.0",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}
