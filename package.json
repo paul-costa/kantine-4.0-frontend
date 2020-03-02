@@ -1,16 +1,15 @@
 {
   "name": "kantine-4.0",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "Paul Costa",
+  "homepage": "https://paulcosta.at",
   "scripts": {
     "ng": "ng",
-    "start": "node ./backend/server.js",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "start:server": "nodemon ./backend/server.js"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
@@ -58,5 +57,5 @@
     "tslint": "~5.15.0",
     "typescript": "~3.4.3"
   },
-  "description": "An Ionic project"
+  "description": "Kantine 4.0 Ionic Project"
 }
