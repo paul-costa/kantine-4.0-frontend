@@ -1,3 +1,29 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu side="start" contentId="my-content" menuId="m1">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>kantine - 4.0</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle menuId="m1">
+          <ion-item routerLink='/overview'>
+            <ion-icon name="restaurant-outline" slot="start"></ion-icon>
+            <ion-label>menu</ion-label>
+          </ion-item>
+        </ion-menu-toggle >
+        
+        <ion-menu-toggle menuId="m1">
+          <ion-item routerLink='/settings'>
+            <ion-icon name="settings-outline" slot="start"></ion-icon>
+            <ion-label>settings</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="my-content"></ion-router-outlet>
 </ion-app>

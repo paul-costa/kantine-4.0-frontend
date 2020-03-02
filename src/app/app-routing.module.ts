@@ -7,6 +7,11 @@ const routes: Routes = [
     path: 'overview',
     loadChildren: () => import('./overview/overview.module').then( m => m.OverviewPageModule)
   },
+  {
+    path: 'settings',
+    loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
+  },
+
   
 ];
 

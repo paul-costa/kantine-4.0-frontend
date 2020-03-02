@@ -6,6 +6,7 @@ import { SegmentChangeEventDetail } from '@ionic/core'
 
 
 interface DishAndPrice {
+  id: string;
   dish: Dish[];
   price: number[] | number;
 }

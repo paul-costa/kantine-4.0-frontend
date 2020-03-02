@@ -1,3 +1,21 @@
+ion-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 90px 1px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  
 ion-img {
-    background-color: white;
+    background-color: rgb(250, 250, 250);
+}
+
+.innerImg {
+    padding: 6px;
+}
+
+ion-segment-button {
+    min-width: 0px;
 }
