@@ -25,6 +25,8 @@ export class OverviewPage implements OnInit, OnDestroy {
   public today: number;
   public menuToday: DishAndPrice[];
 
+  public pageLoading = false;
+
   private menuServiceSub = new Subscription();
 
 
@@ -35,11 +37,13 @@ export class OverviewPage implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.iconLocation = this.getMenuService.iconLocation;
+    this.pageLoading = true;
 
     this.menuServiceSub = this.getMenuService.getWholeMenu().subscribe(res => {
       this.menu = res.pdfdata;
       this.today = this.getMenuService.getWeekDay() - 1;
       this.menuToday = this.getMenuToday(this.today, this.menu);
+      this.pageLoading = false;
     });
   }
 

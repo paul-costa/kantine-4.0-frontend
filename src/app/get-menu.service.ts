@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import { Menu } from './shared/menu.model';
 
 import { environment } from './../environments/environment';
-import { Menu, Dish } from './shared/menu.model';
-import { asapScheduler } from 'rxjs';
 const BACKEND_URL = environment.apiUrl + '/parsepdf/';
 
 @Injectable({

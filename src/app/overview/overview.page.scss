@@ -19,3 +19,9 @@ ion-img {
 ion-segment-button {
     min-width: 0px;
 }
+
+.loadingGrid {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
