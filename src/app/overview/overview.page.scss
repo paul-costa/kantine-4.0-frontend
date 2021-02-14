@@ -1,0 +1,46 @@
+ion-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 90px 1px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  
+ion-img {
+    background-color: rgb(230, 230, 230);
+    box-shadow: 0 0 2px 2px #18181b;
+}
+
+.innerImg {
+    padding: 6px;
+}
+
+ion-segment-button {
+    min-width: 0px;
+}
+
+.loadingGrid {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.k4Logo {
+    margin: 0 16px;
+    padding: 0 6px;
+    border-radius: 8px;
+
+
+    color: #18181b;
+    background-color: invert(#18181b);
+}
+
+@media (prefers-color-scheme: dark) {
+    ion-img {
+        filter: invert(1);
+        background-color: invert(#18181b);
+}
+ }

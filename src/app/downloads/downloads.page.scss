@@ -1,0 +1,48 @@
+.bigCard {
+    width: 80%;
+
+    max-width: 256px;
+    max-height: 256px;
+    text-align: center;
+
+    margin: 24px auto;
+    border-radius: 12px;
+}
+
+.smallCard {
+    height: 60%;
+    width: 60%;
+
+    text-align: center;
+
+    margin: 8px auto;
+    border-radius: 32px;
+
+    background-color: rgb(215, 215, 215);
+
+    cursor: pointer;
+
+    transition: 1s;
+}
+
+.smallCard:hover {
+    transform: scale(1.1);
+}
+
+.imgLogo {
+    color: red;
+}
+
+.titleText {
+    text-decoration: dotted;
+    margin-bottom: 6px;
+}
+.subtitleText {
+    text-align: left;
+    margin-left: 12px;
+}
+
+.imgLabel {
+    font-size: 8pt;
+    font-style: italic;
+}

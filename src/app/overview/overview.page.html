@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false" menu="m1"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title class="ion-text-center">
+      <u>kantine</u>
+      <span class="k4Logo">
+        <span class="mirroredText">4.0</span>
+      </span>
+      <u>menu</u>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="menuToday && !pageLoading">
+  <ion-segment (ionChange)="onChangeDay($event)" [(ngModel)]="today">
+    <ion-segment-button *ngFor="let weekday of workweek; let i = index;" [value]="i">{{weekday}}</ion-segment-button>
+  </ion-segment>
+
+  
+  <ion-grid class="ion-padding">
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item 
+            *ngFor="let menuTodayEl of menuToday; let i = index"
+            detail
+            routerDirection="forward"
+            [routerLink]="['/', 'overview', 'detail', menuTodayEl.id]"
+          >
+            <ion-avatar class="avatar-padding" slot="start"><ion-img class="innerImg" [src]="this.iconLocation[i]"></ion-img></ion-avatar>
+            <ion-label>
+              <h4>{{menuTodayEl.dish['name']}}</h4>
+              <p>{{menuTodayEl.dish['ingredients'].join(', ') }}</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-content *ngIf="pageLoading">
+  <ion-grid class="loadingGrid">
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <ion-spinner name="crescent"></ion-spinner>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
