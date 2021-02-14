@@ -20,7 +20,7 @@ export class DownloadsPage implements OnInit {
         disabled: false,
         os: 'android',
         svg: '../../assets/downloads/android.svg',
-        link: 'https://drive.google.com/file/d/1sv5MpCyqQ1SwqNe-mKPUIw1uvzIoomAJ',
+        link: 'https://drive.google.com/drive/folders/1rvv2Z-HsweGv1UOARCJWbChZdHHnmca7',
         updated: new Date(2021, 1, 14),
         label: 'click to download APK / redirect to PlayStore'
       },
